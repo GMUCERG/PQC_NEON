@@ -1,0 +1,43 @@
+cothan@cothans-Air ref % sudo make bench 
+./test_speed512_macos
+gen_matrix: 11761
+poly_getnoise_eta1: 1926
+poly_getnoise_eta2: 1460
+poly_tomsg: 295
+poly_frommsg: 100
+ref_ntt: 3211
+ref_invntt: 5118
+crypto_kem_keypair: 59280
+crypto_kem_enc: 75719
+crypto_kem_dec: 89510
+VectorVectorMul: 17319
+MatrixVectorMul: 26830
+
+./test_speed768_macos
+gen_matrix: 26891
+poly_getnoise_eta1: 1458
+poly_getnoise_eta2: 1459
+poly_tomsg: 295
+poly_frommsg: 100
+ref_ntt: 3118
+ref_invntt: 5109
+crypto_kem_keypair: 104929
+crypto_kem_enc: 119777
+crypto_kem_dec: 137819
+VectorVectorMul: 23317
+MatrixVectorMul: 46454
+
+
+./test_speed1024_macos
+gen_matrix: 47553
+poly_getnoise_eta1: 1457
+poly_getnoise_eta2: 1457
+poly_tomsg: 295
+poly_frommsg: 100
+ref_ntt: 3210
+ref_invntt: 5118
+crypto_kem_keypair: 162907
+crypto_kem_enc: 175444
+crypto_kem_dec: 198354
+VectorVectorMul: 29632
+MatrixVectorMul: 70084

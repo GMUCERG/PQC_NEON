@@ -1,0 +1,18 @@
+./test/speed512
+GenMatrix: 7926
+GenSecret: 3741
+crypto_kem_keypair: 25820
+crypto_kem_enc: 30674
+crypto_kem_dec: 31352
+./test/speed768
+GenMatrix: 19942
+GenSecret: 4500
+crypto_kem_keypair: 50633
+crypto_kem_enc: 56515
+crypto_kem_dec: 53347
+./test/speed1024 
+GenMatrix: 33458
+GenSecret: 4306
+crypto_kem_keypair: 71271
+crypto_kem_enc: 78679
+crypto_kem_dec: 76961

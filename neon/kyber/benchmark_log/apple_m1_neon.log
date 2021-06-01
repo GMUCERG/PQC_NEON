@@ -1,0 +1,42 @@
+cothan@cothans-Air neon % sudo make bench
+./test_speed512_macos
+gen_matrix: 7687
+neon_poly_getnoise_eta1_2x: 2697
+neon_poly_getnoise_eta2: 1299
+poly_tomsg: 295
+poly_frommsg: 100
+neon_ntt: 413
+neon_invntt: 428
+crypto_kem_keypair: 22956
+crypto_kem_enc: 32563
+crypto_kem_dec: 29448
+VectorVectorMul 1858
+MatrixVectorMul 2809
+./test_speed768_macos
+gen_matrix: 17954
+neon_poly_getnoise_eta1_2x: 1289
+neon_poly_getnoise_eta2: 1288
+poly_tomsg: 295
+poly_frommsg: 100
+neon_ntt: 413
+neon_invntt: 428
+crypto_kem_keypair: 36319
+crypto_kem_enc: 49230
+crypto_kem_dec: 45668
+VectorVectorMul 2545
+MatrixVectorMul 4910
+./test_speed1024_macos
+gen_matrix: 30743
+neon_poly_getnoise_eta1_2x: 1289
+neon_poly_getnoise_eta2: 1284
+poly_tomsg: 295
+poly_frommsg: 100
+neon_ntt: 413
+neon_invntt: 428
+crypto_kem_keypair: 55940
+crypto_kem_enc: 71602
+crypto_kem_dec: 67096
+VectorVectorMul 3271
+MatrixVectorMul 7651
+echo "DONE"
+DONE

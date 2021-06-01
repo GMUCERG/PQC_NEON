@@ -1,0 +1,95 @@
+sudo cpupower frequency-set --governor performance 
+[sudo] password for cothan: 
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+Setting cpu: 4
+Setting cpu: 5
+Setting cpu: 6
+Setting cpu: 7
+Setting cpu: 8
+Setting cpu: 9
+Setting cpu: 10
+Setting cpu: 11
+./test_speed512 
+gen_matrix: 3850
+poly_getnoise_eta1: 1916
+poly_getnoise_eta2: 1275
+poly_getnoise_eta1_4x: 2393
+poly_ntt: 125
+poly_invntt_tomont: 131
+polyvec_basemul_acc_montgomery: 113
+poly_tomsg: 18
+poly_frommsg: 28
+poly_compress: 18
+poly_decompress: 21
+polyvec_compress: 159
+polyvec_decompress: 52
+indcpa_keypair: 8424
+indcpa_enc: 8835
+indcpa_dec: 670
+crypto_kem_keypair: 13555
+crypto_kem_enc: 23186
+crypto_kem_dec: 17507
+VectorVectorMul: 493
+MatrixVectorMul: 770
+./test_speed768
+gen_matrix: 11101
+poly_getnoise_eta1: 1365
+poly_getnoise_eta2: 1475
+poly_getnoise_eta1_4x: 1373
+poly_ntt: 151
+poly_invntt_tomont: 155
+polyvec_basemul_acc_montgomery: 163
+poly_tomsg: 17
+poly_frommsg: 28
+poly_compress: 18
+poly_decompress: 21
+polyvec_compress: 293
+polyvec_decompress: 76
+indcpa_keypair: 16660
+indcpa_enc: 16894
+indcpa_dec: 929
+crypto_kem_keypair: 24366
+crypto_kem_enc: 33933
+crypto_kem_dec: 25998
+VectorVectorMul: 658
+MatrixVectorMul: 1247
+./test_speed1024
+gen_matrix: 15695
+poly_getnoise_eta1: 1280
+poly_getnoise_eta2: 1270
+poly_getnoise_eta1_4x: 1208
+poly_ntt: 126
+poly_invntt_tomont: 132
+polyvec_basemul_acc_montgomery: 220
+poly_tomsg: 20
+poly_frommsg: 28
+poly_compress: 36
+poly_decompress: 27
+polyvec_compress: 407
+polyvec_decompress: 175
+indcpa_keypair: 22559
+indcpa_enc: 22415
+indcpa_dec: 1307
+crypto_kem_keypair: 32376
+crypto_kem_enc: 45194
+crypto_kem_dec: 35529
+VectorVectorMul: 841
+MatrixVectorMul: 1908
+sudo cpupower frequency-set --governor powersave
+Setting cpu: 0
+Setting cpu: 1
+Setting cpu: 2
+Setting cpu: 3
+Setting cpu: 4
+Setting cpu: 5
+Setting cpu: 6
+Setting cpu: 7
+Setting cpu: 8
+Setting cpu: 9
+Setting cpu: 10
+Setting cpu: 11
+echo "DONE"
+DONE

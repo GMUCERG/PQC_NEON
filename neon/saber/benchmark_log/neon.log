@@ -1,0 +1,24 @@
+./test/speed512
+GenMatrix: 8890
+GenSecret: 4357
+crypto_kem_keypair: 31241
+crypto_kem_enc: 37194
+crypto_kem_dec: 35355
+neonInnerProd: 3198
+neonMatrixVectorMul: 6643
+./test/speed768
+GenMatrix: 20150
+GenSecret: 4084
+crypto_kem_keypair: 51311
+crypto_kem_enc: 59806
+crypto_kem_dec: 57949
+neonInnerProd: 4343
+neonMatrixVectorMul: 14027
+./test/speed1024
+GenMatrix: 34985
+GenSecret: 4554
+crypto_kem_keypair: 76993
+crypto_kem_enc: 87878
+crypto_kem_dec: 86641
+neonInnerProd: 5317
+neonMatrixVectorMul: 21585
