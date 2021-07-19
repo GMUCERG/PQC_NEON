@@ -22,6 +22,22 @@ All units are clock cycles.
 | MatrixVectorMul    |        2,809 |        4,910 |        7,652 |
 
 
+### Update Result July 18 2021
+
+Major changes in NTT operation and `VectorVectorMul` and `MatrixVectorMul`, eventually afect the `keypair`, `encap`, and `decap` results.
+
+| Kyber M1 NEON      | neon Level 1 | neon Level 3 | neon Level 5 |
+|--------------------|-------------:|-------------:|-------------:|
+| neon_ntt           |          240 |          240 |          240 |
+| neon_invntt        |          254 |          254 |          254 |
+| crypto_kem_keypair |       21,693 |       34,117 |       52,362 |
+| crypto_kem_enc     |       30,949 |       46,684 |       68,193 |
+| crypto_kem_dec     |       27,052 |       41,574 |       63,476 |
+| VectorVectorMul    |        1,105 |        1,512 |        1,922 |
+| MatrixVectorMul    |        1,673 |        2,923 |        4,461 |
+
+
+
 ## NTRU
 
 - Run `make test/speed; sudo test/speed` to perform benchmark. Require `sudo` to read performance counter in Apple M1. 
@@ -59,8 +75,12 @@ All units are clock cycles.
 | InnerProd          |        3,182 |        4,344 |        5,317 |
 | MatrixVectorMul    |        6,641 |       14,028 |       21,608 |
 
-
 ## Saber NTT 
+
+Notes: The NTT benchmark results respect the Saber specification, that include the cost of forward/inverse to/from NTT domain, for example:
+
+- `InnerProd`: `C = NTT^{-1}(NTT(A) * NTT(B))`
+
 
 - Run `make all; make verify; sudo make bench` to perform verification and benchmark. Require `sudo` to read performance counter in Apple M1. 
 
@@ -70,3 +90,19 @@ All units are clock cycles.
 | neon_invntt        |          519 |          519 |          519 |
 | InnerProd          |        6,117 |        8,470 |       10,839 |
 | MatrixVectorMul    |       10,084 |       18,931 |       30,393 |
+
+### Update result July 18 2021
+
+Major changes in NTT operation and `VectorVectorMul` and `MatrixVectorMul`, eventually afect the `keypair`, `encap`, and `decap` results.
+
+| Saber-NTT M1 NEON  | neon Level 1 | neon Level 3 | neon Level 5 |
+|--------------------|-------------:|-------------:|-------------:|
+| neon_ntt           |          279 |          279 |          280 |
+| neon_invntt        |          324 |          324 |          324 |
+| crypto_kem_keypair |       29,977	|       47,298 |       71,532 |
+| crypto_kem_enc     |       35,949 |       55,892 |       82,776 |
+| crypto_kem_dec     |       34,142 |       54,117 |       81,983 |
+| InnerProd          |        3,244 |        4,452 |        5,699 |
+| MatrixVectorMul    |        5,341 |        9,974 |       16,103 |
+
+This new result show that Saber-NTT is more efficient than Saber Toom-Cook implementation.
