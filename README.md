@@ -179,3 +179,40 @@ Notes: _Saber-NTT is selected for comparison._
 |    1 | Kyber1024 |       214,150 |    1.00 | Kyber1024 |       209,720 |    1.00 |
 |    2 | firesaber |       261,243 |    1.22 | firesaber |       273,122 |    1.30 |
 
+
+## Citation
+
+```bib
+@InProceedings{pqc_neon21,
+author="Nguyen, Duc Tri
+and Gaj, Kris",
+editor="Cheon, Jung Hee
+and Tillich, Jean-Pierre",
+title="Fast NEON-Based Multiplication for Lattice-Based NIST Post-quantum Cryptography Finalists",
+booktitle="Post-Quantum Cryptography",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="234--254",
+isbn="978-3-030-81293-5"
+}
+
+```
+
+## References 
+
+Saber-NTT is faster than Toom-Cook Saber by replacing the old modular reduction with shorter modular reduction (just few instructions!), more details can be found here. 
+
+```bib
+@misc{cryptoeprint:2021:986,
+    author       = {Hanno Becker and
+		    Vincent Hwang and
+		    Matthias J. Kannwischer and
+		     Bo-Yin Yang and
+		    Shang-Yi Yang},
+    title        = {Neon NTT: Faster Dilithium, Kyber, and Saber on Cortex-A72 and Apple M1},
+    howpublished = {Cryptology ePrint Archive, Report 2021/986},
+    year         = {2021},
+    note         = {\url{https://ia.cr/2021/986}},
+}
+```
