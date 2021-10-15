@@ -182,6 +182,8 @@ Notes: _Saber-NTT is selected for comparison._
 
 ## Citation
 
+The implementation in this repo is belong to the paper "Fast NEON-Based Multiplication for Lattice-Based NIST Post-quantum Cryptography Finalists" by Duc Tri Nguyen and Prof. Kris Gaj @ CERG GMU. 
+
 ```bib
 @InProceedings{pqc_neon21,
 author="Nguyen, Duc Tri
@@ -216,3 +218,9 @@ Saber-NTT is faster than Toom-Cook Saber by replacing the old modular reduction 
     note         = {\url{https://ia.cr/2021/986}},
 }
 ```
+
+## License 
+
+Apache 2.0 
+
+Knowledge from this work is taken from public domain, thus, returned to public domain. Feel free to make a pull request.
